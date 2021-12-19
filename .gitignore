@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+binanceApi.py
+dont_add.py
 # C extensions
 *.so
 
