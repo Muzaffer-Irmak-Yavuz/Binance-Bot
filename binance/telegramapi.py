@@ -1,7 +1,3 @@
-# There are problems and there is C programming language
-#                                   Muzaffer Irmak YAVUZ
-
-
 
 import telegram_send
 
