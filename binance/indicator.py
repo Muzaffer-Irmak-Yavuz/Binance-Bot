@@ -36,12 +36,3 @@ def rsi(values, periods = 14, ema = True):
 
     return pta.rsi(df['close'], length = 14)
 
-def get_bollinger_bands(prices, rate=20):
-
-    df = pd.DataFrame(prices, columns=['close'])
-    sma = df.rolling(rate).mean()
-    std = df.rolling(rate).std()
-    bollinger_up = sma + std * 2 
-    bollinger_down = sma - std * 2 
-    
-    return bollinger_up,bollinger_down
