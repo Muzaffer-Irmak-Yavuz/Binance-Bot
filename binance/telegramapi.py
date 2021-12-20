@@ -1,3 +1,4 @@
+#include <c_forever.h>
 import telegram_send
 
 def assert_user(message :str):
