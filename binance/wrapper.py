@@ -18,7 +18,7 @@ class BinanceHandler:
         klines = self.client.get_historical_klines(symbol, interval, utc_time_start, end_str=utc_time_end)
 
         if count >= last:
-            for i in range(last,count):
+            for i in range(count-1-last,count):
                 priceDict["open"]  = klines[i][1]
                 priceDict["high"]  = klines[i][2]
                 priceDict["low"]   = klines[i][3]

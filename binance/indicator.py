@@ -21,11 +21,15 @@ def calculate_macd(values):
     df['macd_h'] = df.index.map(macd_h)
     df['macd_s'] = df.index.map(macd_s)
 
-    
+    macd = df['macd']
+    macd_s = df['macd_s']
+    macd_h = df['macd_h']
+
+
     
     
         
-    return df 
+    return int(macd.iloc[-1]) ,int(macd_s.iloc[-1]) ,int(macd_h.iloc[-1]) 
     
 
 def rsi(values, periods = 14, ema = True):
@@ -34,5 +38,8 @@ def rsi(values, periods = 14, ema = True):
 
     df['close'] = pd.to_numeric(df['close'], errors='coerce').fillna(0).astype(int)
 
-    return pta.rsi(df['close'], length = 14)
+    
+
+    
+    return int(pta.rsi(df['close'], length = 14).iloc[-1])
 
